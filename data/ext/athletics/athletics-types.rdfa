@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Athletics schema (Enumerations)</title>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      span.h {
+        padding-left: 0px;
+        font-weight: bold;
+      }
+      span {
+        display: block;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+<body>
+  <div resource="http://athletics.schema.org/"></div>
+  <h1>Athletics Schema Extension (enumerations)</h1> 
+  <hr/>
+
+  <p vocab="http://schema.org" prefix="http://athletics.schema.org/">Default vocabulary prefix: 'ath:'</p>
+  <p><span property="softwareVersion">athletics.schema.org Version 0.1</span></p>
+  <hr/>
+
+<h2>Enumerations</h2>
+
+
+<!--h3>Competition Feature Types</h3-->
+
+
+<h3>Result Status Types</h3>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ResultsStatusType">
+  <span class="h" property="rdfs:label">ResultsListStatusType</span>
+  <span property="rdfs:comment">Enumeration with the potential statuses a list of results may be in, during a competition.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsStartList">
+  <span class="h" property="rdfs:label">ResultsStartList</span>
+  <span property="rdfs:comment">Status of the list of results: before competition, the Start List of competitors who are registered to take part in the competition.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsLive">
+  <span class="h" property="rdfs:label">LiveResults</span>
+  <span property="rdfs:comment">Status of the list of results: live updates during competition.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsIntermediate">
+  <span class="h" property="rdfs:label">ResultsIntermediate</span>
+  <span property="rdfs:comment">Status of the list of results: intermediate results. When competition is stopped, used at pre-defined points.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsUnconfirmed">
+  <span class="h" property="rdfs:label">ResultsUnconfirmed</span>
+  <span property="rdfs:comment">Status of the list of results: unconfirmed. When the unit competition is over but not yet unofficial or official.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsUnofficial">
+  <span class="h" property="rdfs:label">ResultsUnofficial</span>
+  <span property="rdfs:comment">Status of the list of results: unofficial. Results of the competition released as soon as the event is over, not waiting any official decision. The correctness of data must be assured.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsOfficial">
+  <span class="h" property="rdfs:label">ResultsOfficial</span>
+  <span property="rdfs:comment">Status of the list of results: official. Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsPartial">
+  <span class="h" property="rdfs:label">ResultsPartial</span>
+  <span property="rdfs:comment">Status of the list of results: partial. Incomplete list.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ResultsStatusType" resource="http://schema.org/ResultsProtested">
+  <span class="h" property="rdfs:label">ResultsProtested</span>
+  <span property="rdfs:comment">Status of the list of results: protested. After the competition a protest has been lodged. After all decisions on the protest are made the status must change to unofficial or official as appropriate.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<h3>Protest Status</h3>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ProtestStatusType">
+  <span class="h" property="rdfs:label">ProtestStatus</span>
+  <span property="rdfs:comment">Status of the protests concerning the status of an athlete to participate in a competition or protests concerning the result or conduct of an event.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
+</div>
+ 
+<div typeof="http://schema.org/ProtestStatusType" resource="http://schema.org/ProtestClosed">
+  <span class="h" property="rdfs:label">ProtestClosed</span>
+  <span property="rdfs:comment">Protest is closed.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ProtestStatusType" resource="http://schema.org/ProtestOpen">
+  <span class="h" property="rdfs:label">ProtestOpen</span>
+  <span property="rdfs:comment">Protest is open.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ProtestStatusType" resource="http://schema.org/ProtestPending">
+  <span class="h" property="rdfs:label">ProtestPending</span>
+  <span property="rdfs:comment">Protest is pending.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/ProtestStatusType" resource="http://schema.org/ProtestReopen">
+  <span class="h" property="rdfs:label">ProtestReopen</span>
+  <span property="rdfs:comment">Protest is open again after being closed.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<h3>Types of Results in Field Trials</h3>
+
+<div typeof="rdfs:Class" resource="http://schema.org/FieldTrialFeatureType">
+  <span class="h" property="rdfs:label">FieldTrialFeatureType</span>
+  <span property="rdfs:comment">Type of status or feature of a trial (pending, valid or failed).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
+</div>
+
+<div typeof="http://schema.org/FieldTrialFeatureType" resource="http://schema.org/FieldTrialPending">
+  <span class="h" property="rdfs:label">FieldTrialPending</span>
+  <span property="rdfs:comment">The athlete does not performed the trial in a field event yet.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/FieldTrialFeatureType" resource="http://schema.org/FieldTrialValid">
+  <span class="h" property="rdfs:label">FieldTrialValid</span>
+  <span property="rdfs:comment">Valid execution of a trial in a field event.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/FieldTrialFeatureType" resource="http://schema.org/FieldTrialFailed">
+  <span class="h" property="rdfs:label">FieldTrialFailed</span>
+  <span property="rdfs:comment">Failed execution of a trial in a field event.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/FieldTrialFeatureType" resource="http://schema.org/FieldTrialSubstitute">
+  <span class="h" property="rdfs:label">FieldTrialSubstitute</span>
+  <span property="rdfs:comment">Substitute trial in a field event.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<h3>Types of Sports Event Status</h3> 
+
+<div typeof="rdfs:Class" resource="http://schema.org/EventStatusType">
+  <span class="h" property="rdfs:label">EventStatusType</span>
+  <span property="rdfs:comment">Type of status of a competition (e.g., scheduled, delayed, etc.)</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventUnscheduled">
+  <span class="h" property="rdfs:label">EventUnscheduled</span>
+  <span property="rdfs:comment">The event is not confirmed yet.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventScheduled">
+  <span class="h" property="rdfs:label">EventRescheduled</span>
+  <span property="rdfs:comment">Competition is rescheduled.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventScheduled">
+  <span class="h" property="rdfs:label">EventScheduled</span>
+  <span property="rdfs:comment">The event is confirmed and scheduled.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventPostponed">
+  <span class="h" property="rdfs:label">EventPostponed</span>
+  <span property="rdfs:comment">Competition will be postponed without being rescheduled yet.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventDelayed">
+  <span class="h" property="rdfs:label">EventDelayed</span>
+  <span property="rdfs:comment">An event is held up, for example by inclement weather. Can happen before or during an event.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventRunning">
+  <span class="h" property="rdfs:label">EventRunning</span>
+  <span property="rdfs:comment">Competition in progress (mid-event in SportsML).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventScheduledBreak">
+  <span class="h" property="rdfs:label">EventScheduledBreak</span>
+  <span property="rdfs:comment">Competition has a scheduled break (intermission in SportsML).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+ 
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventInterrupted">
+  <span class="h" property="rdfs:label">EventInterrupted</span>
+  <span property="rdfs:comment">Competition interrupted once in progress (halted in SportsML).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+ 
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventGettingReady">
+  <span class="h" property="rdfs:label">EventGettingReady</span>
+  <span property="rdfs:comment">The start of the event is imminent.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+  
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventFinished">
+  <span class="h" property="rdfs:label">EventFinished</span>
+  <span property="rdfs:comment">Competition is over and no more action will happen on the field of play (last competitor finished). (post-event in SportsML)</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="http://schema.org/EventStatusType" resource="http://schema.org/EventCancelled">
+  <span class="h" property="rdfs:label">EventCancelled</span>
+  <span property="rdfs:comment">Competition will not take place (suspended, cancelled, discarded in SportsML).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+
+
+</body>
+</html>
