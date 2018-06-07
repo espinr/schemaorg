@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  {% include 'headtags.tpl' with context %}
     <title>Schemas - schema.org</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Schema.org is a set of extensible schemas that enables webmasters to embed
     structured data on their web pages for use by search engines and other applications." />
-    <link rel="stylesheet" type="text/css" href="/docs/schemaorg.css" />
 </head>
 <body onload="updatetext()">
 
@@ -24,8 +24,8 @@ This is a placeholder page for developer-oriented information about schema.org. 
 
 <h2 id="conneg">Machine Readable Term Definitions</h2>
 
-<p>Machine-readable definitions of individual terms is availble as RDFa, embeded into the term page html. It is also available in other formats by accessing term URLs, using the <a href="https://www.w3.org/TR/swbp-vocab-pub/#negotiation">Linked Data Content Negotiation</a> technique of providing the required type in an HTTP Accept header value.  The same content is also available by providing an appropriate suffix to the term URL.  For example the Triples definition for the <a href="{{staticPath}}/Book">Book</a> Type can bet retrieved with the following URL <a href="{{staticPath}}/Book.nt">{{staticPath}}/Book.nt</a>.</p>
-<p>The currently supported format types, relevant Accept values and url suffixes are:</p>
+<p>Machine-readable definitions of individual terms are availble as RDFa, embeded into the term page html. It is also available in other formats by accessing term URLs, using the <a href="https://www.w3.org/TR/swbp-vocab-pub/#negotiation">Linked Data Content Negotiation</a> technique of providing the required type in an HTTP Accept header value.  The same content is also available by providing an appropriate suffix to the term URL.  For example the Triples definition for the <a href="{{staticPath}}/Book">Book</a> Type can bet retrieved with the following URL <a href="{{staticPath}}/Book.nt">{{staticPath}}/Book.nt</a>.</p>
+<p>The currently supported format types, relevant Accept values, and url suffixes are:</p>
 	<ul><li>JSON-LD - application/ld+json - .jsonld</li>
 		<li>RDF/XML - application/rdf+xml - .rdf</li>
 		<li>Triples - text/plain - .nt</li>
@@ -40,12 +40,12 @@ This is a placeholder page for developer-oriented information about schema.org. 
 
 <p>Older releases can be found (under data/releases/) at <a href="https://github.com/schemaorg/schemaorg">GitHub</a>.
 
-<p>Select the file and format required and click Download.  
-<br/>Note: File <em>schema</em> contains the definition of the core vocabulary, <em>all-layers</em> contains definitions for the core and all the extensions.</p>
+<p>Select the file and format required and click Download.  The CSV format downloads are split accross two files: <em>Types</em> includes definitions of Types and Enumeration Values, including lists of associated properties; <em>Properties</em> contains property definitions.<br/>
+<br/><strong>Note:</strong> File <em>schema</em> contains the definition of the core vocabulary; <em>bib</em> contains only the definitions for the bib.schema.org extension; <em>all-layers</em> contains definitions for the core plus all the extensions.</p>
 
-<p>
-	<table padding="2" width="600">
-	<tr><td width="30%">
+
+	<table style="padding: 2px; width:600px">
+	<tr><td style="width: 30%;">
 			File: <select id="filename"  onchange="updatetext()">
 				<option value="{{staticPath}}/version/latest/schema">schema</option>
 				<option value="{{staticPath}}/version/latest/all-layers">all-layers</option>
@@ -54,7 +54,7 @@ This is a placeholder page for developer-oriented information about schema.org. 
 				{% endfor %}
 			</select>
 	</td>
-	<td width="30%">
+	<td style="width: 30%;">
 		Format:  <select id="fileext" onchange="updatetext()">
 				<option value=".nt">Triples</option>
 				<option value=".nq">Quads</option>
@@ -64,24 +64,24 @@ This is a placeholder page for developer-oriented information about schema.org. 
 				<option value=".csv">CSV</option>
 		</select>
 	</td>
-	<td width="30%">
+	<td style="width: 30%;">
 		<div id ="csvsel">
 			For: <select id="csvfmt" onchange="updatetext()">
 				<option value="-types">Types</option>
 				<option value="-properties">Properties</option>
-				<option value="-enumvalues">Enumeration Values</option>
+				<!-- <option value="-enumvalues">Enumeration Values</option> -->
 			</select>
 		</div>
 	</td>
 	</tr>
 	<tr><td colspan="3">
 		<div id="label"></div>
-	<tr><td colspan="3" align="centre">
-		<input type="button" onclick="dowloadfunc();" value="Download"></input>
+	<tr><td colspan="3" style="text-align: center;">
+		<input type="button" onclick="dowloadfunc();" value="Download"/>
 	</td></tr>
 		
 	</table>
-</p>
+
   </div>
 
 
