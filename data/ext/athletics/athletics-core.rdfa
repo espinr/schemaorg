@@ -43,8 +43,9 @@
 
 <div typeof="rdfs:Class" resource="http://schema.org/Athlete">
   <span class="h" property="rdfs:label">Athlete</span>
-  <span property="rdfs:comment">An Athlete is a Person who participates in Athletics events.</span>
+  <span property="rdfs:comment">An Athlete is a Person who participates in sports events.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEntity">SportsEntity</a></span>
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Person">Person</a></span>
 </div>
 
@@ -52,6 +53,7 @@
   <span class="h" property="rdfs:label">SportsGoverningBody</span>
   <span property="rdfs:comment">A Sports Governing Body is a special type of organization in charge of governing and rule the sport of athletics. These sports governing bodies, sometimes referred as Federations, may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEntity">SportsEntity</a></span>
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsOrganization">SportsOrganization</a></span>
 </div>
 
@@ -60,24 +62,72 @@
 
 <div typeof="rdfs:Class" resource="http://schema.org/CompetitiveAudience">
   <span class="h" property="rdfs:label">CompetitiveAudience</span>
-  <span property="rdfs:comment">Audience of competitors with similar features that will compete in a competition composing categories. Categories may include gender, age range and specific rules depending of the event.</span>
+  <span property="rdfs:comment">Intended audience competitors with similar features that will compete in a competition composing categories. Categories may include gender, age range and specific rules depending of the event.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/PeopleAudience">PeopleAudience</a></span>
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/CompetitionEvent">
-  <span class="h" property="rdfs:label">CompetitionEvent</span>
+<div typeof="rdfs:Class" resource="http://schema.org/SportsCompetitionEvent">
+  <span class="h" property="rdfs:label">SportsCompetitionEvent</span>
   <span property="rdfs:comment">A Competition, Athletics Competition or Sports Competition is an event in which Athletes or Teams take part in order to find out who is best at a particular sports activity.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEvent">SportsEvent</a></span>
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEntity">SportsEntity</a></span>
 </div>
 
+<div typeof="rdfs:Class" resource="http://schema.org/CompetitionQualificationCriteria">
+  <span class="h" property="rdfs:label">CompetitionQualificationCriteria</span>
+  <span property="rdfs:comment">Competition qualification criteria are the requirements for a competitor to pass a qualification competition round. In athletics, qualification may be based on the standard or finishing position, or by athlete's performance.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEntity">SportsEntity</a></span>
+</div>
+
+<!-- Types of record or bests 
+<div typeof="rdfs:Class" resource="http://schema.org/RecordOrBestType">
+  <span class="h" property="rdfs:label">RecordOrBestType</span>
+  <span property="rdfs:comment">An enumeration that describes different types records or bests is an athlete's best performance according to specific criteria set by a Sports Governing Body. For instance, World Records are ratified by the IAAF.</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
+</div>
+-->
+
+<!-- Performance -->
+
+<div typeof="rdfs:Class" resource="http://schema.org/SportsPerformance">
+  <span class="h" property="rdfs:label">SportsPerformance</span>
+  <span property="rdfs:comment">Sports performance is the resulting competitor's accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres, etc.). </span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/AchieveAction">AchieveAction</a></span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/ScoreSportsPerformance">
+  <span class="h" property="rdfs:label">ScoreSportsPerformance</span>
+  <span property="rdfs:comment">Score performance is a type of sports performance for competitions that are based on score points (i.e., combined events).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/DistanceSportsPerformance">
+  <span class="h" property="rdfs:label">DistanceSportsPerformance</span>
+  <span property="rdfs:comment">Distance performance is a type of sports performance based on measurements in distance units (i.e., throws, horizontal jumps).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+</div>
+
+<div typeof="rdfs:Class" resource="http://schema.org/TimePerformance">
+  <span class="h" property="rdfs:label">TimeSportsPerformance</span>
+  <span property="rdfs:comment">Time performance is a type of sports performance for timed competitions (i.e., races).</span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+</div>
+
+<!-- 
 <div typeof="rdfs:Class" resource="http://schema.org/UnitCompetitionEvent">
   <span class="h" property="rdfs:label">UnitCompetitionEvent</span>
   <span property="rdfs:comment">A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition rounds have one or more Unit Competitions.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/UnitRace">
@@ -143,48 +193,6 @@
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/ExerciseAction">ExerciseAction</a></span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/SportsPerformance">
-  <span class="h" property="rdfs:label">SportsPerformance</span>
-  <span property="rdfs:comment">Performance represents the resulting competitor's accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). </span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/AchieveAction">AchieveAction</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/PointsPerformance">
-  <span class="h" property="rdfs:label">PointsPerformance</span>
-  <span property="rdfs:comment">Points Performance is a performance for competitions based on score points (i.e., combined events).</span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/DistancePerformance">
-  <span class="h" property="rdfs:label">DistancePerformance</span>
-  <span property="rdfs:comment">Distance Performance is a performance based on distance (i.e., throws, horizontal jumps).</span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/TimePerformance">
-  <span class="h" property="rdfs:label">TimePerformance</span>
-  <span property="rdfs:comment">Time Performance is a performance for timed competitions (i.e., races).</span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/QualificationCriteria">
-  <span class="h" property="rdfs:label">QualificationCriteria</span>
-  <span property="rdfs:comment">Qualification Criteria are the requirements for the competitor to pass a qualification round. Qualification may be based on the standard or finishing position, or by performance.</span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/RecordOrBest">
-  <span class="h" property="rdfs:label">RecordOrBest</span>
-  <span property="rdfs:comment">Record or Best is an athlete's best performance according to specific criteria set by a Sports Governing Body. For instance, World Records are ratified by the IAAF.</span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/Intangible">Intangible</a></span>
-</div>
-
 <div typeof="rdfs:Class" resource="http://schema.org/TimekeepingAction">
   <span class="h" property="rdfs:label">TimekeepingAction</span>
   <span property="rdfs:comment">Timekeeping mechanism of timing a sports event (manual, automatic, etc.).</span>
@@ -212,32 +220,137 @@
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/TimekeepingAction">TimekeepingAction</a></span>
 </div>
+-->
 
 <h2>Properties</h2>
 
-<div typeof="rdf:Property" resource="http://schema.org/bestPerformance">
-  <span class="h" property="rdfs:label">bestPerformance</span>
-  <span property="rdfs:comment">Best performance achieved by a competitor (athlete or team) in an Athletics competition.</span>
+<div typeof="rdf:Property" resource="http://schema.org/qualificationCriteria">
+  <span class="h" property="rdfs:label">qualificationCriteria</span>
+  <span property="rdfs:comment">Qualification Criteria are the details what a competitor has to do to get to the next round in a competition.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionQualificationCriteria">CompetitionQualificationCriteria</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/performance" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/sportsDiscipline">
+  <span class="h" property="rdfs:label">sportsDiscipline</span>
+  <span property="rdfs:comment">A particular type of sports event (e.g., 60m Short Hurdles).</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsDiscipline">SportsDiscipline</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/sport" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/qualifiedByPlaceOrStandard">
+  <span class="h" property="rdfs:label">qualifiedByPlaceOrStandard</span>
+  <span property="rdfs:comment">Number of competitors that are qualified by rank (track events) or standard (field events) in a competition.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionQualificationCriteria">CompetitionQualificationCriteria</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/qualifiedByPerformance">
+  <span class="h" property="rdfs:label">qualifiedByPerformance</span>
+  <span property="rdfs:comment">Number of competitors that are qualified in a competition by their best performance.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionQualificationCriteria">CompetitionQualificationCriteria</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/competitionCategory">
+  <span class="h" property="rdfs:label">competitionCategory</span>
+  <span property="rdfs:comment">Competition category is the intended competitive audience that corresponds to a specific category in a competition (e.g., M35, U18 Male, local competitors, etc).</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
+  <!--span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/RecordOrBest">RecordOrBest</a></span-->
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitiveAudience">CompetitiveAudience</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/audience" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/entryRequirements">
+  <span class="h" property="rdfs:label">entryRequirements</span>
+  <span property="rdfs:comment">Requirements to entry in a sports competition. Some governing bodies and organizers limit the participation in competition to specific age groups or athletes with concrete minimum performances.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/previousFamilyName">
+  <span class="h" property="rdfs:label">previousFamilyName</span>
+  <span property="rdfs:comment">Previous family name of a person if, for example, there has been a change due to marriage.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/familyName" />
 </div>
 
 <div typeof="rdf:Property" resource="http://schema.org/previousGivenName">
   <span class="h" property="rdfs:label">previousGivenName</span>
-  <span property="rdfs:comment">Previous given name of a person.</span>
+  <span property="rdfs:comment">Previous given name of a person if, for example, there has been a change due to sex change.</span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/givenName" />
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/previousFamilyName">
-  <span class="h" property="rdfs:label">previousFamilyName</span>
-  <span property="rdfs:comment">Previous family name of a person.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Person">Person</a></span>
+<div typeof="rdf:Property" resource="http://schema.org/sportsPerformance">
+  <span class="h" property="rdfs:label">sportsPerformance</span>
+  <span property="rdfs:comment">Measure to quantify a performance of an athlete or team in a sports competition.</span>
+  <!--span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span-->
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Athlete">Athlete</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+  <!--span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FieldTrial">FieldTrial</a></span-->
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/result" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/bestSportsPerformance">
+  <span class="h" property="rdfs:label">bestSportsPerformance</span>
+  <span property="rdfs:comment">The best performance achieved by an athlete or a team in sports competitions.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Athlete">Athlete</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/sportsPerformance" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/scorePoints">
+  <span class="h" property="rdfs:label">scorePoints</span>
+  <span property="rdfs:comment">Official measure of a performance expressed as score points, according to a specific reference scale.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/ScoreSportsPerformance">ScoreSportsPerformance</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/reactionTime">
+  <span class="h" property="rdfs:label">reactionTime</span>
+  <span property="rdfs:comment">Reaction time is the interval time it takes a runner to respond to the start signal in sprint sports and begin leaving the starting blocks. Reaction time should be expressed as [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601) (e.g., 00:00:00.232 for 232 milliseconds).</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TimeSportsPerformance">TimeSportsPerformance</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Duration">Duration</a></span>
+  <link property="rdfs:subPropertyOf" href="http://schema.org/performTime" />  
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/windAssistance">
+  <span class="h" property="rdfs:label">windAssistance</span>
+  <span property="rdfs:comment">Wind assistance is a measurement related to the speed of wind. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values.</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
+  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
+</div>
+
+<div typeof="rdf:Property" resource="http://schema.org/recordOrBestType">
+  <span class="h" property="rdfs:label">recordOrBestType</span>
+  <span property="rdfs:comment">Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). It is recommended to use the official abbreviations (e.g., WR for World Record, =AS Asian Record, etc.). Check [the full list of records and bests abbreviations](https://w3c.github.io/opentrack-cg/spec/model/#record-or-best-type).</span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/familyName" />
+  <link property="rdfs:subPropertyOf" href="http://schema.org/award" />
 </div>
 
 <div typeof="rdf:Property" resource="http://schema.org/captain">
@@ -249,6 +362,9 @@
   <link property="http://schema.org/inverseOf" href="http://schema.org/captainOf"/>
 </div>
 
+<!--
+
+
 <div typeof="rdf:Property" resource="http://schema.org/captainOf">
   <span class="h" property="rdfs:label">captainOf</span>
   <span property="rdfs:comment">Sports team that the athlete is captain of.</span>
@@ -258,47 +374,24 @@
   <link property="http://schema.org/inverseOf" href="http://schema.org/captain"/>
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/sportsDiscipline">
-  <span class="h" property="rdfs:label">sportsDiscipline</span>
-  <span property="rdfs:comment">A particular type of Athletics event (e.g., 60m Short Hurdles).</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsDiscipline">SportsDiscipline</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/sport" />
-</div>
+
 
 <div typeof="rdf:Property" resource="http://schema.org/unitCompetition">
   <span class="h" property="rdfs:label">unitCompetition</span>
   <span property="rdfs:comment">Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/UnitCompetition">UnitCompetition</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/subEvent" />
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/sportsCategory">
-<span class="h" property="rdfs:label">sportsCategory</span>
-  <span property="rdfs:comment">The intended competitive audience that corresponds to a specific category for a competition (e.g., M35, U18 Male, local competitors, etc).</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/RecordOrBest">RecordOrBest</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitiveAudience">CompetitiveAudience</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/audience" />
-</div>
 
-<div typeof="rdf:Property" resource="http://schema.org/entryRequirements">
-  <span class="h" property="rdfs:label">entryRequirements</span>
-  <span property="rdfs:comment">Requirements to register in the competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
+
 
 <div typeof="rdf:Property" resource="http://schema.org/competitionStage">
   <span class="h" property="rdfs:label">competitionStage</span>
   <span property="rdfs:comment">A stage within a multi stage competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/subEvent" />
@@ -307,7 +400,7 @@
 <div typeof="rdf:Property" resource="http://schema.org/round">
   <span class="h" property="rdfs:label">round</span>
   <span property="rdfs:comment">Round in an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final). Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/subEvent" />
@@ -316,25 +409,17 @@
 <div typeof="rdf:Property" resource="http://schema.org/competitionAction">
   <span class="h" property="rdfs:label">competitionAction</span>
   <span property="rdfs:comment">Action of Athletes(s) or teams(s) taking part of the competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionAction">CompetitionAction</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/potentialAction" />
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/qualificationCriteria">
-  <span class="h" property="rdfs:label">qualificationCriteria</span>
-  <span property="rdfs:comment">Qualification Criteria are the details what a competitor has to do to get to the next round in a competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QualificationCriteria">QualificationCriteria</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
 
 <div typeof="rdf:Property" resource="http://schema.org/competitionStage">
   <span class="h" property="rdfs:label">competitionStage</span>
   <span property="rdfs:comment">A stage within a multi stage competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <link property="rdfs:subPropertyOf" href="http://schema.org/subEvent" />
@@ -343,7 +428,7 @@
 <div typeof="rdf:Property" resource="http://schema.org/resultDecision">
   <span class="h" property="rdfs:label">resultDecision</span>
   <span property="rdfs:comment">Results of the participation in a competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
@@ -402,15 +487,16 @@
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
-
+-->
 <!--div typeof="rdf:Property" resource="http://schema.org/competitor">
   <span class="h" property="rdfs:label">competitor</span>
   <span property="rdfs:comment">Athlete or team participating in the event.</span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/CompetitionAction">CompetitionAction</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div-->
-
+</div>
+-->
+<!--
 
 <div typeof="rdf:Property" resource="http://schema.org/competitionFeature">
   <span class="h" property="rdfs:label">competitionFeature</span>
@@ -463,36 +549,7 @@
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/sportsPerformance">
-  <span class="h" property="rdfs:label">sportsPerformance</span>
-  <span property="rdfs:comment">Measure to quantify a performance of a competitor in a sports competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Athlete">Athlete</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsTeam">SportsTeam</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FieldTrial">FieldTrial</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/result" />
-</div>
 
-<div typeof="rdf:Property" resource="http://schema.org/windAssistance">
-  <span class="h" property="rdfs:label">windAssistance</span>
-  <span property="rdfs:comment">Wind assistance. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/QuantitativeValue">QuantitativeValue</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
-
-<div typeof="rdf:Property" resource="http://schema.org/recordOrBest">
-  <span class="h" property="rdfs:label">recordOrBest</span>
-  <span property="rdfs:comment">Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.).</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsPerformance">SportsPerformance</a></span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionResult">CompetitionResult</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/RecordOrBest">RecordOrBest</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <link property="rdfs:subPropertyOf" href="http://schema.org/award" />
-</div>
 
 <div typeof="rdf:Property" resource="http://schema.org/performTime">
   <span class="h" property="rdfs:label">performTime</span>
@@ -503,38 +560,6 @@
   <link property="rdfs:subPropertyOf" href="http://schema.org/duration" />
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/reactionTime">
-  <span class="h" property="rdfs:label">reactionTime</span>
-  <span property="rdfs:comment">Reaction time is the interval time it takes a runner to respond to the start signal and begin leaving the starting blocks. Reaction time should be expressed as [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601) (e.g., 00:00:00.232 for 232 milliseconds).</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TimePerformance">TimePerformance</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Duration">Duration</a></span>
-  <link property="rdfs:subPropertyOf" href="http://schema.org/duration" />  
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
-
-<div typeof="rdf:Property" resource="http://schema.org/scorePoints">
-  <span class="h" property="rdfs:label">scorePoints</span>
-  <span property="rdfs:comment">Official measure of a performance expressed as score points.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/PointsPerformance">PointsPerformance</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Number">Number</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
-
-<div typeof="rdf:Property" resource="http://schema.org/qualifiedByPlaceOrStandard">
-  <span class="h" property="rdfs:label">qualifiedByPlaceOrStandard</span>
-  <span property="rdfs:comment">Number of competitors that are qualified by rank (track events) or standard (field events) in a competition.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QualificationCriteria">QualificationCriteria</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
-
-<div typeof="rdf:Property" resource="http://schema.org/qualifiedByPerformance">
-  <span class="h" property="rdfs:label">qualifiedByPerformance</span>
-  <span property="rdfs:comment">Number of competitors that are qualified in a competition by best performance achievedatt.</span>
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/QualificationCriteria">QualificationCriteria</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Integer">Integer</a></span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-</div>
 
 <div typeof="rdf:Property" resource="http://schema.org/attemptNumber">
   <span class="h" property="rdfs:label">attemptNumber</span>
@@ -553,6 +578,7 @@
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
+-->
 
 <h3>Core Annotations</h3>
 
@@ -562,15 +588,23 @@
 
 <h4>Properties</h4>
 
+<div typeof="rdf:Property" resource="http://schema.org/distance">
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/DistancePerformance">DistanceSportsPerformance</a></span>
+</div>
 
+<div typeof="rdf:Property" resource="http://schema.org/performTime">
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/TimeSportsPerformance">TimeSportsPerformance</a></span>
+</div>
+
+<!--
 <div typeof="rdf:Property" resource="http://schema.org/eventStatus">
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionEvent">CompetitionEvent</a></span>
+  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/SportsCompetitionEvent">SportsCompetitionEvent</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/EventStatusType">EventStatusType</a></span>
 </div>
 
-
+-->
+<!--
 <div typeof="rdf:Property" resource="http://schema.org/coach">
-  <!--span property="rdfs:comment">A person that acts in a coaching role for a sports team or an athlete.</span-->
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Athlete">Athlete</a></span>
 </div>
 
@@ -578,9 +612,6 @@
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitionPerformance">CompetitionPerformance</a></span>
 </div>
 
-<div typeof="rdf:Property" resource="http://schema.org/distance">
-  <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/DistancePerformance">DistancePerformance</a></span>
-</div>
 
 <div typeof="rdf:Property" resource="http://schema.org/height">
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/HeightTrial">HeightTrial</a></span>
@@ -606,12 +637,12 @@
 <div typeof="rdf:Property" resource="http://schema.org/temporalCoverage">
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/RecordOrBest">RecordOrBest</a></span>
 </div>
-
+-->
 
 <h5>From 'health-lifesci'</h5>
 
 <div typeof="rdf:Property" resource="http://schema.org/recognizingAuthority">
-  <span property="rdfs:comment">If applicable, the organization that officially recognizes this entity as part of its endorsed system and stablished rules for that.</span>
+  <span property="rdfs:comment">An organization or person that officially recognizes this entity as part of its endorsed system and established rules for that.</span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/CompetitiveAudience">CompetitiveAudience</a></span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/RecordOrBest">RecordOrBest</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Person">Person</a></span>

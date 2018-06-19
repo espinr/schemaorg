@@ -32,6 +32,7 @@
   <span property="rdfs:comment">Sports discipline is a particular type of sport restricted and governed by specific rules.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEntity">SportsEntity</a></span>
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/AthleticsDiscipline">
@@ -48,8 +49,8 @@
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/AthleticsDiscipline">AthleticsDiscipline</a></span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/MiddleOrLongDistanceDiscipline">
-  <span class="h" property="rdfs:label">MiddleOrLongDistanceDiscipline</span>
+<div typeof="rdfs:Class" resource="http://schema.org/DistanceDiscipline">
+  <span class="h" property="rdfs:label">DistanceDiscipline</span>
   <span property="rdfs:comment">Middle-distance or Long-distance running event, over a distance longer than sprints (over 800m and up to Marathon 42.195 Km).</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
@@ -59,7 +60,7 @@
   <span class="h" property="rdfs:label">SteeplechaseDiscipline</span>
   <span property="rdfs:comment">Steeplechase. Long distance running events where runners must clear obstacles and water jumps.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/MiddleOrLongDistanceDiscipline">MiddleOrLongDistanceDiscipline</a></span>
+  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/HurdlesDiscipline">
@@ -91,21 +92,21 @@
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/RoadRunningDiscipline">
-  <span class="h" property="rdfs:label">DisciplineRoadRunning</span>
+  <span class="h" property="rdfs:label">RoadRunningDiscipline</span>
   <span property="rdfs:comment">Road running is an Athletics discipline on a measured course over an established road.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/MountainRunningDiscipline">
-  <span class="h" property="rdfs:label">DisciplineMountainRunning</span>
+  <span class="h" property="rdfs:label">MountainRunningDiscipline</span>
   <span property="rdfs:comment">Mountain running is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
 </div>
 
 <div typeof="rdfs:Class" resource="http://schema.org/TrackRelaysDiscipline">
-  <span class="h" property="rdfs:label">DisciplineTrackRelays</span>
+  <span class="h" property="rdfs:label">TrackRelaysDiscipline</span>
   <span property="rdfs:comment">Relays or relay race is a track race between two or more teams where each member of the team runs one leg of the race.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
@@ -113,7 +114,7 @@
 
 <div typeof="rdfs:Class" resource="http://schema.org/UltraRunningDiscipline">
   <span class="h" property="rdfs:label">UltraRunningDiscipline</span>
-  <span property="rdfs:comment">Ultra running, ultra distance or ultramarathon, is a footrace longer than the traditional marathon length (42.195 Km).</span>
+  <span property="rdfs:comment">Ultra running, ultra distance or ultramarathon, is a foot race longer than the traditional marathon length (42.195 Km).</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/RaceDiscipline">RaceDiscipline</a></span>
 </div>
@@ -209,34 +210,6 @@
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/AthleticsDiscipline">AthleticsDiscipline</a></span>
 </div>
 
-<div typeof="rdfs:Class" resource="http://schema.org/PentathlonDiscipline">
-  <span class="h" property="rdfs:label">PentathlonDiscipline</span>
-  <span property="rdfs:comment">Pentathlon is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score. </span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CombinedDiscipline">CombinedDiscipline</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/HeptathlonDiscipline">
-  <span class="h" property="rdfs:label">HeptathlonDiscipline</span>
-  <span property="rdfs:comment">Heptathlon is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score. </span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CombinedDiscipline">CombinedDiscipline</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/DisciplineDecathlon">
-  <span class="h" property="rdfs:label">DisciplineDecathlon</span>
-  <span property="rdfs:comment">Decathlon is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score. </span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CombinedDiscipline">CombinedDiscipline</a></span>
-</div>
-
-<div typeof="rdfs:Class" resource="http://schema.org/DisciplineThrowsPentathlon">
-  <span class="h" property="rdfs:label">DisciplineThrowsPentathlon</span>
-  <span property="rdfs:comment">Pentathlon is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score. </span>
-  <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-  <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/CombinedDiscipline">CombinedDiscipline</a></span>
-</div>
-
 <h2>Enumerations</h2>
 
 <h3>Indoor/outdoor disciplines</h3>
@@ -270,40 +243,40 @@
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
 </div>
 
-<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/RaceClassic">
-  <span class="h" property="rdfs:label">RaceClassic</span>
+<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/ClassicRace">
+  <span class="h" property="rdfs:label">ClassicRace</span>
   <span property="rdfs:comment">Classic Race, where athletes compete individually against each other.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
-<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/RaceRelays">
-  <span class="h" property="rdfs:label">RaceRelays</span>
+<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/RelaysRace">
+  <span class="h" property="rdfs:label">RelaysRace</span>
   <span property="rdfs:comment">Relay Race is a race between two or more teams, where each runner covers part of the total distance.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
-<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/RaceTimeTrial">
-  <span class="h" property="rdfs:label">RaceTimeTrial</span>
+<div typeof="http://schema.org/RaceCompetitionType" resource="http://schema.org/TimeTrialRace">
+  <span class="h" property="rdfs:label">TimeTrialRace</span>
   <span property="rdfs:comment">Time Trial is a contest in which competitors race along a course individually, instead of racing directly against each other.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
 <h3>Types of Running Tracks</h3>
 
-<div typeof="rdfs:Class" resource="http://schema.org/RunningTrackType">
-  <span class="h" property="rdfs:label">RunningTrackType</span>
+<div typeof="rdfs:Class" resource="http://schema.org/AthleticsTrackType">
+  <span class="h" property="rdfs:label">AthleticsTrackType</span>
   <span property="rdfs:comment">Type of track where a race is held (i.e. straight, curved).</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
   <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SportsEnumeration">SportsEnumeration</a></span>
 </div>
 
-<div typeof="http://schema.org/RunningTrackType" resource="http://schema.org/StraightTrack">
+<div typeof="http://schema.org/AthleticsTrackType" resource="http://schema.org/StraightTrack">
   <span class="h" property="rdfs:label">StraightTrack</span>
   <span property="rdfs:comment">Straight Track.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
-<div typeof="http://schema.org/RunningTrackType" resource="http://schema.org/CurvedTrack">
+<div typeof="http://schema.org/AthleticsTrackType" resource="http://schema.org/CurvedTrack">
   <span class="h" property="rdfs:label">CurvedTrack</span>
   <span property="rdfs:comment">Curved Track.</span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
@@ -338,7 +311,7 @@
 
 <div typeof="rdf:Property" resource="http://schema.org/spacing">
   <span class="h" property="rdfs:label">spacing</span>
-  <span property="rdfs:comment">Horizontal distance between two hurdles.</span>
+  <span property="rdfs:comment">The distance between any two objects in a usually regularly arranged series.</span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/HurdlesDiscipline">HurdlesDiscipline</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Distance">Distance</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
@@ -346,10 +319,10 @@
 </div>
 
 <div typeof="rdf:Property" resource="http://schema.org/runningTrackType">
-  <span class="h" property="rdfs:label">runningTrackType</span>
-  <span property="rdfs:comment">Type of track for a running (i.e., straight, curved).</span>
+  <span class="h" property="rdfs:label">athleticsTrackType</span>
+  <span property="rdfs:comment">Type of athletics track (i.e., straight, curved).</span>
   <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Sprints">Sprints</a></span>
-  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/RunningTrackType">RunningTrackType</a></span>
+  <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/RunningTrackType">AthleticsTrackType</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
 </div>
 
@@ -405,7 +378,6 @@
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
   <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
   <link property="http://schema.org/isPartOf" href="http://athletics.schema.org" />
-
 </div>
 
 
